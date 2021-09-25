@@ -4,7 +4,7 @@ const router = require('./routes/router')
 const bodyParser = require('body-parser');
 const swaggerUi = require('swagger-ui-express');
 const swaggerFile = require('./swagger/swagger_output.json');
-const port = 3000;
+const port = process.env.port || 3000;
 
 app.use('/doc', swaggerUi.serve, swaggerUi.setup(swaggerFile));
 app.use(bodyParser.json())
