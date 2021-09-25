@@ -1,0 +1,217 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "REST API",
+    "description": "Developed by Pedro Davi https://pedrodavi.com.br"
+  },
+  "host": "https://api.srvex.com.br",
+  "basePath": "/",
+  "tags": [],
+  "schemes": [
+    "https"
+  ],
+  "consumes": [],
+  "produces": [],
+  "paths": {
+    "/v1/business-date/{date}": {
+      "get": {
+        "tags": [],
+        "description": "Checar se dia é útil.",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "date",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "Data",
+            "example": "29042022"
+          }
+        ],
+        "responses": {
+          "200": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "data": {
+                  "type": "string",
+                  "example": ""
+                },
+                "diaDaSemana": {
+                  "type": "string",
+                  "example": ""
+                },
+                "util": {
+                  "type": "string",
+                  "example": ""
+                },
+                "msg": {
+                  "type": "string",
+                  "example": ""
+                }
+              },
+              "required": [
+                "data",
+                "diaDaSemana",
+                "util",
+                "msg"
+              ],
+              "xml": {
+                "name": "main"
+              }
+            },
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/v1/crypt": {
+      "post": {
+        "tags": [],
+        "description": "Criptografia.",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Request",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "sequence": {
+                  "type": "string",
+                  "example": "string"
+                }
+              },
+              "required": [
+                "sequence"
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "encryptedString": {
+                  "type": "string",
+                  "example": ""
+                },
+                "diKey": {
+                  "type": "string",
+                  "example": ""
+                },
+                "publicKey": {
+                  "type": "string",
+                  "example": ""
+                },
+                "privateKey": {
+                  "type": "string",
+                  "example": ""
+                }
+              },
+              "required": [
+                "encryptedString",
+                "diKey",
+                "publicKey",
+                "privateKey"
+              ],
+              "xml": {
+                "name": "main"
+              }
+            },
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/v1/decrypt": {
+      "post": {
+        "tags": [],
+        "description": "Descriptografia.",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Request",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "diKey": {
+                  "type": "string",
+                  "example": ""
+                },
+                "encryptedString": {
+                  "type": "string",
+                  "example": ""
+                },
+                "privateKey": {
+                  "type": "string",
+                  "example": ""
+                },
+                "publicKey": {
+                  "type": "string",
+                  "example": ""
+                }
+              },
+              "required": [
+                "diKey",
+                "encryptedString",
+                "privateKey",
+                "publicKey"
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "sequence": {
+                  "type": "string",
+                  "example": "string"
+                }
+              },
+              "required": [
+                "sequence"
+              ],
+              "xml": {
+                "name": "main"
+              }
+            },
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/v1/address/{zipcode}": {
+      "get": {
+        "tags": [],
+        "description": "Consultar endereço por CEP.",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "zipcode",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "CEP",
+            "example": "58900000"
+          }
+        ],
+        "responses": {}
+      }
+    }
+  },
+  "definitions": {}
+}

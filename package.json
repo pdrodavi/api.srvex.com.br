@@ -1,0 +1,21 @@
+{
+  "name": "br.com.srvex.api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.4",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "express-http-proxy": "^1.6.2",
+    "swagger-autogen": "^2.11.2",
+    "swagger-ui-express": "^4.1.6"
+  }
+}
