@@ -5,7 +5,7 @@
     "title": "REST API",
     "description": "Developed by Pedro Davi https://pedrodavi.com.br"
   },
-  "host": "https://api.srvex.com.br",
+  "host": "api.pedrodavi.com.br",
   "basePath": "/",
   "tags": [],
   "schemes": [
