@@ -5,7 +5,7 @@
     "title": "REST API",
     "description": "Developed by Pedro Davi https://pedrodavi.com.br"
   },
-  "host": "api.pedrodavi.com.br",
+  "host": "gwayapi.herokuapp.com",
   "basePath": "/",
   "tags": [],
   "schemes": [
